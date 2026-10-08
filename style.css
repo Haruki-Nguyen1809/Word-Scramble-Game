@@ -1,0 +1,151 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    padding: 24px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f1f5f9;
+    color: #1e293b;
+}
+
+h1 {
+    margin: 0 0 24px;
+    font-size: 2rem;
+}
+
+/* Hai khối chính dùng chung một kiểu */
+#content-box,
+#result-box {
+    width: 100%;
+    max-width: 460px;
+    padding: 24px;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.hidden {
+    display: none;
+}
+
+#word-container {
+    min-height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    overflow-wrap: anywhere;
+    color: #4f46e5;
+}
+
+#hint {
+    margin: 8px 0 20px;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 400;
+    font-style: italic;
+    color: #64748b;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+#time-left,
+#point {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+#time-left {
+    color: #ea580c;
+}
+
+#answer-field {
+    width: 100%;
+    padding: 12px 14px;
+    margin-bottom: 16px;
+    font-size: 1rem;
+    border: 2px solid #cbd5e1;
+    border-radius: 10px;
+    outline: none;
+}
+
+#answer-field:focus {
+    border-color: #4f46e5;
+}
+
+.btn-container {
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    flex: 1;
+    padding: 12px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #1e293b;
+    background: #e2e8f0;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.15s;
+}
+
+button:hover {
+    background: #cbd5e1;
+}
+
+button:active {
+    transform: translateY(1px);
+}
+
+#check-btn,
+#start-btn,
+#restart-btn {
+    color: #ffffff;
+    background: #4f46e5;
+}
+
+#check-btn:hover,
+#start-btn:hover,
+#restart-btn:hover {
+    background: #4338ca;
+}
+
+#result-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    text-align: center;
+}
+
+#result-content h2,
+#result-content p {
+    margin: 0;
+}
+
+#final-score {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #4f46e5;
+}
+
+#restart-btn {
+    flex: none;
+    padding: 12px 32px;
+}
